@@ -1,0 +1,50 @@
+body {
+    background-color: lavenderblush;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+div.row {
+    margin-top: 80px;
+    text-align: center;
+    font-family: "Book Antiqua";
+    margin-bottom: 100px;
+}
+
+div.container {
+    text-align: center;
+    font-family: "Book Antiqua";
+    margin-bottom: 40px;
+}
+
+div.box {
+    background-color: gray;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    font-family: "Book Antiqua";
+    width: 100%;
+}
+
+.text {
+    margin-left: 40px;
+}
+
+ul.pager {
+
+}
+
+div.kuva {
+    float: right;
+}
+
+
+
+
+
+

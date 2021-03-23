@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: lavenderblush;
+}
+
+h1, h2 {
+    color: hotpink;
+    font-weight: bold;
+}
+
+ul, ol, dl {
+    border-style: dotted;
+    color: darkgrey;
+    margin-left: 5%;
+}
+
+p {
+    margin-left: 5%;
+}
+
+figcaption {
+    font-weight: bold;
+    font-size: small;
+}
+
+p::first-letter {
+    font-size: 8em;
+}
+
+p::first-line {
+    font-weight: bold;
+}
