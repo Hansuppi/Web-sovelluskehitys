@@ -29,6 +29,7 @@ div.box {
     padding-top: 20px;
     font-family: "Book Antiqua";
     width: 100%;
+    border-radius: 1em;
 }
 
 .text {

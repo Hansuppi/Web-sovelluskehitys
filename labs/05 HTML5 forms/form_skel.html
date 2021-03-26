@@ -6,57 +6,69 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Demonstrating HTML forms</title>
+		<link href="form.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	<body>
 		<h1>Turnitin</h1>
 		<form  lang="fi" action="">
-			<div>
-				Name: <input type="text" name="studentname"/>
-			</div>
-			<div>
-				Student id: <input type="text" name="id"  />
-			</div>
-			<div>
-				Email:
-				<!--
-				Make an input named "email"
-				-->
-			</div>
-			<div>
-				Assignment:
-				<!--
-				Make an input named "assignment"
-				-->
-				
+			<div class="text">
+				Name: <input type="text" name="studentname" placeholder="First Name"/>
+				<input type="text" name="studentname" placeholder="Last Name"/>
 			</div>
 
-			<div>
-				Code:
-				<!--
-				Make an input named "code" which is a text area to put student's code into.
-				-->
-				
+			<div class="text">
+				Student id: <input type="text" name="id" placeholder="xxxx-xxx" pattern="\d{4}\-\d{3}([0-9])"  />
 			</div>
-			<div>
-				Cheat:
-			<!--
-				Make an input named "cheat" which is a check box the student must check.
-			-->
+
+			<div class="text">
+				Email: <input type="email" name="email" placeholder="email@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+				oninvalid="this.setCustomValidity('Insert email!')"
+				onvalid="this.setCustomValidity('')" />
 			</div>
-			<div>
-				Pay:
-			<!--
-				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
-			-->
+
+			<div class="text">
+				Assignment: <input type="text" name="assignment" />
 			</div>
-			<div>
+
+			<div class="text">
+				Code: <input type="text" name="code" />
+			</div>
+
+			<div class="text">
+				Cheat: <input type="checkbox" name="cheat" />
+			</div>
+
+			<div class="pay">
+				<form action="">
+					<fieldset>
+						<legend>Pay</legend>
+				<input type="radio" name="pay" value="Visa"/>
+				<label for="Visa">Visa</label><br>
+				<input type="radio" name="pay" value="Paypal"/>
+				<label for="Paypal">Paypal</label><br>
+				<input type="radio" name="pay" value="MasterCard"/>
+				<label for="MasterCard">Master Card</label>
+					</fieldset>
+				</form>
+			</div>
+
+			<div class="text">
 				Score:
-			<!--
-				Make an input named "score" which is a list of choices for the score 
-			-->
+				<input list="Score">
+
+				<datalist id="Score">
+					<option value="1">
+					<option value="2">
+					<option value="3">
+					<option value="4">
+					<option value="5">
+				</datalist>
 			</div>
-			<input type="submit" />
+
+			<div class="submit">
+			<input type="submit" name="submit" value="Submit"/>
+			</div>
 		</form>
 		<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate</a>
 	</body>
