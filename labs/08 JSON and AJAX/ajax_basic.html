@@ -10,9 +10,20 @@
     Make a request
   </span>
 
+  <form id="form">
+      URL: <input id="urlInput" type="text"/>
+      <input type="submit" value="Submit"/>
+  </form>
+
 
   <script type="text/javascript">
   (function() {
+
+      document.getElementById("form").addEventListener('submit', function() {
+          let url = document.getElementById('urlInput').value;
+          makeRequest(url);
+      });
+
     var httpRequest;
     var testUrl = 'data/story.json';
     // Use Github Gist when no web server is available

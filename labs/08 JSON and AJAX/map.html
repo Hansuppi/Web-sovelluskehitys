@@ -24,6 +24,15 @@
 			var textToAdd = " Div was clicked! "
 			var newNode = document.createTextNode(textToAdd);
 			document.getElementById("mydiv").appendChild(newNode);
+
+			let ul = document.createElement("ul");
+
+			for(let i = 0; i < 5; i++) {
+			    let li = document.createElement("li");
+			    li.innerHTML = "Kukkuu";
+			    ul.appendChild(li);
+            }
+			document.querySelector('body').appendChild(ul)
 		} else {
 			alert("Looks like you have an old browser!");
 		}
