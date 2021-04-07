@@ -18,6 +18,8 @@
 		var rand5 = Math.floor(Math.random() * 5);
 		var rand6 = Math.floor(Math.random() * 2);
 
+		makeEngine();
+
 		var car = {
 			make: makes[rand1],
 			model: models[rand2],
@@ -25,14 +27,44 @@
 			color: colors[rand4],
 			passengers: rand5,
 			convertible: convertible[rand6],
-			mileage: 0
+			mileage: 0,
+          supply: makeEngine().supply,
+          horsepower: makeEngine().horsepower,
+          fuel: makeEngine().fuel,
+          trb: makeEngine().trb
 		};
 		return car;
 	}
 
 	function displayCar(car) {
 		console.log("Your new car is a " + car.year + " " + car.make + " " + car.model);
+		console.log("Engine specs: Supplier: " + car.supply + ", Horsepower:  " + car.horsepower + ", Fuel: " + car.fuel + ", Turbo: " + car.trb);
 	}
+
+	function makeEngine() {
+	  var supplier = ["Audi", "Saab", "Volvo", "Tesla"];
+      var hp = ["600", "700", "800", "1000"];
+      var fuel = ["Petrol", "Diesel", "Electric"];
+      var turbo = [true, false];
+
+      var rand1 = Math.floor(Math.random() * supplier.length);
+      var rand2 = Math.floor(Math.random() * hp.length);
+      var rand3 = Math.floor(Math.random() * fuel.length);
+      var rand4 = Math.floor(Math.random() * turbo.length);
+
+      var engine = {
+        supply: supplier[rand1],
+        horsepower: hp[rand2],
+        fuel: fuel[rand3],
+        trb: turbo[rand4]
+      }
+
+      return engine;
+    }
+
+    function displayEngine(engine){
+	  console.log("Engine specs: " + engine.horsepower + " " + engine.fuel + " " + engine.trb);
+    }
 
 	var carToSell = makeCar();
 	displayCar(carToSell);

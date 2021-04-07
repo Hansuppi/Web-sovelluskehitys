@@ -73,7 +73,7 @@ border:solid 1px #BFBD9F;
 width:200px;
 margin:2px 0 20px 10px;
 }
-#submit{
+#submit, #duplicates{
 clear:both;
 margin-left:150px;
 width:125px;
