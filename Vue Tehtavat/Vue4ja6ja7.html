@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue4</title>
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+        <h1>To Do List</h1>
+
+        <input type="text" v-model="todo">
+        <input type="submit" value="Add" @click="saveTodo">
+
+        <ol>
+            <li v-for="(todo, index) in todos">
+                {{ todo }}
+                <button @click="deleteTodo(index)">Delete</button>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="Vue4ja6ja7.js"></script>
+
+</body>
+</html>
