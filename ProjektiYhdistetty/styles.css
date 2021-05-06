@@ -1,0 +1,28 @@
+.content {
+    text-align: center;
+    font-family: 'Poppins', serif;
+    font-weight: bold;
+    /*background gifi lisätty!*/
+    background-image: url("giphy2.gif");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position-x: 900px;
+    background-position-y: top;
+    background-attachment: fixed;
+    /*backgroundin väri*/
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+
+.container {
+    width: 75vw;
+}
+
+.textinput {
+    margin: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    padding: 15px;
+}

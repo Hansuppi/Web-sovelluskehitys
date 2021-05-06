@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="stylesheet.css" type="text/css" rel="stylesheet" />
+    <title>Lomake-esimerkki</title>
+</head>
+<body>
+
+<script src="server.js"></script>
+
+<form action = "http://127.0.0.1:8081/process_post" method = "POST">
+    First Name: <input type = "text" name = "first_name" pattern="[A-Z][A-Za-z]+"/> <br>
+    Last Name: <input type = "text" name = "last_name" pattern="[A-Z][A-Za-z]+"/> <br>
+    Email: <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z}{2,}$"/> <br>
+    Age <input type="number" name="age" pattern="[0-9]"/> <br>
+    <input type = "submit" value = "Submit"/> <br>
+</form>
+
+</body>
+</html>
